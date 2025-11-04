@@ -4,9 +4,9 @@
  */
 
 /**
- * Modified by:
+ * Modified by: Charlie Lemerand
  * 
- * Brief summary of modifications:
+ * Brief summary of modifications: Changed exit(1) to kill
  */
 
 
@@ -19,8 +19,9 @@
  * @brief Signal handler for SIGINT - prints a message and exits
  */
 void handle_signal() {
-    printf("Received a signal\n");
-    exit(1);
+    printf("\nReceived a signal\n");
+    pid_t pid = getpid();
+    kill(pid, SIGKILL);
 }
 
 int main() {
