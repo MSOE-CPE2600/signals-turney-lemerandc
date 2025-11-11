@@ -50,3 +50,8 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Ignore your built program binaries (any file with no extension)
+recv_signal
+send_signal
+signal_alarm
